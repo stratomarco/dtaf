@@ -1,0 +1,225 @@
+{
+  "repository": "https://github.com/The-AI-Alliance/tapestry",
+  "commit": "3d44c130b78c3b2ce4bd042603873d55ede89faf",
+  "package": "tapestry",
+  "validator_path": "contrib/build4me2-contribution-validator",
+  "coordinator_path": "src/tapestry/training/consortium/coordinator.py",
+  "files": [
+    {
+      "path": "CONTRIBUTING.md",
+      "git_blob_sha": "c275b17d6dc9a7ac1f34a3d97130f0591250d222",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/CONTRIBUTING.md",
+      "sha256": "8054917bcad9639473ace2ccf95d79ba97a74ce9bce0e9881ecf35747d0578e9"
+    },
+    {
+      "path": "README.md",
+      "git_blob_sha": "0676ac7d02dc473bff41059c21505c81dd84257c",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/README.md",
+      "sha256": "f06aed305e76f673fe09a9af37551062eaa86f354642620910a45e4be5727860"
+    },
+    {
+      "path": "SECURITY.md",
+      "git_blob_sha": "9d57b2cb67d19acc732a8cafd0f9b33cf3babc13",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/SECURITY.md",
+      "sha256": "e2089618b72cc3942b1843eb8fc5a0ff04810ddce7e347f0b0207277d638c2f1"
+    },
+    {
+      "path": "contrib/README.md",
+      "git_blob_sha": "cac1abf5d2a1e0d60cb4b72c49b8890173c6375b",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/contrib/README.md",
+      "sha256": "1d15f992053a986424e098680ac645a036f7184146156e092f7b3cd7f366491f"
+    },
+    {
+      "path": "contrib/build4me2-contribution-validator/README.md",
+      "git_blob_sha": "01fd6cdfd57dab8ccff82347d5d0453a2e64bbba",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/contrib/build4me2-contribution-validator/README.md",
+      "sha256": "279dd074a8a9e20987f84e2feea8ecefc952ca472c5a56d4c8d1b811cdafc067"
+    },
+    {
+      "path": "contrib/build4me2-contribution-validator/contribution_validator/__init__.py",
+      "git_blob_sha": "e591a0309c48efe411c384dd41eabf6757830a09",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/contrib/build4me2-contribution-validator/contribution_validator/__init__.py",
+      "sha256": "5c5f7520f14544441a16a9d4f758bc838c7b85882212fc8d2def4679e0e7f167"
+    },
+    {
+      "path": "contrib/build4me2-contribution-validator/contribution_validator/faults.py",
+      "git_blob_sha": "8d773e60a6cdec0e0d9f6534ba34c702d84b6a3b",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/contrib/build4me2-contribution-validator/contribution_validator/faults.py",
+      "sha256": "39d3e18ef5941d3d53fcb619daa091eff673300293ed66aa31242cc18ca13f7e"
+    },
+    {
+      "path": "contrib/build4me2-contribution-validator/contribution_validator/findings.py",
+      "git_blob_sha": "6a1e009b110913c664588a90d5f78ed900485f6c",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/contrib/build4me2-contribution-validator/contribution_validator/findings.py",
+      "sha256": "0099a3c2087bca1df9286582b6f4a660c4d8c232296b641c63d84c5f502e92cc"
+    },
+    {
+      "path": "contrib/build4me2-contribution-validator/contribution_validator/fingerprint.py",
+      "git_blob_sha": "7133d46dcf95589963fe37d93bf75d7d384ff216",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/contrib/build4me2-contribution-validator/contribution_validator/fingerprint.py",
+      "sha256": "2f573d2e7718e173331a1b0f55e7e0ae3332f633767d97e3d3eb20ac18a67761"
+    },
+    {
+      "path": "contrib/build4me2-contribution-validator/contribution_validator/gate.py",
+      "git_blob_sha": "dc62782f752d0bb545b6df38ad355938ca3ae3f7",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/contrib/build4me2-contribution-validator/contribution_validator/gate.py",
+      "sha256": "f8711ad734624a9c6c2eccfaaa88ea548b82b2924a8fdbb5b18e381e6b3e4356"
+    },
+    {
+      "path": "contrib/build4me2-contribution-validator/contribution_validator/limits.py",
+      "git_blob_sha": "1a72cf6ba99eafa0be1d5382ce40bfef5f6e1a86",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/contrib/build4me2-contribution-validator/contribution_validator/limits.py",
+      "sha256": "35f2495bd8f947980994cfd94315f043ea076f316e9a398ff281af3768105509"
+    },
+    {
+      "path": "contrib/build4me2-contribution-validator/contribution_validator/testing.py",
+      "git_blob_sha": "f793efb778878c3a7506759ec397ab1264abf022",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/contrib/build4me2-contribution-validator/contribution_validator/testing.py",
+      "sha256": "9959bd27544910cdf55981b4459424b631acecca0d0d78d60d70d75e1e997427"
+    },
+    {
+      "path": "contrib/build4me2-contribution-validator/contribution_validator/validator.py",
+      "git_blob_sha": "c744bce95562ebb20ab8f26d1e4a6a0393a16756",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/contrib/build4me2-contribution-validator/contribution_validator/validator.py",
+      "sha256": "4e35f3e25ca388c7ea725209b067f446a9ce91b8643fd5fbf9c2f02f9f61c0ac"
+    },
+    {
+      "path": "contrib/build4me2-contribution-validator/tests/test_fingerprint.py",
+      "git_blob_sha": "a4cad4e8bf421aa79a8cb1b855098927ff2533f5",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/contrib/build4me2-contribution-validator/tests/test_fingerprint.py",
+      "sha256": "eaf505d002452431a51e26841c6b8974dcd9e46748ed6d835d6b8e634b3f9c89"
+    },
+    {
+      "path": "contrib/build4me2-contribution-validator/tests/test_validator.py",
+      "git_blob_sha": "fc212803a7fc7203163e92a12270a0493ea4469f",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/contrib/build4me2-contribution-validator/tests/test_validator.py",
+      "sha256": "22901febd0cad66f6cf22a70c05dc3e4151b088542464d34333053f97bc60746"
+    },
+    {
+      "path": "docs/architecture/decisions/adr-002-consortium-training.md",
+      "git_blob_sha": "bec879b6b0350529a935effd0e08fb0f15087e73",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/docs/architecture/decisions/adr-002-consortium-training.md",
+      "sha256": "7cd36ed9fa1c7fc3d8395970618eb8656a4044ebadaaf389a5ef8a62003e4bd3"
+    },
+    {
+      "path": "docs/governance/README.md",
+      "git_blob_sha": "9af1dacec19096507492785b73eb76e69ca7ba4d",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/docs/governance/README.md",
+      "sha256": "84a47aad1baa899ef7af37691f27757a18e05a44d2dfeaf4ca280548db43da05"
+    },
+    {
+      "path": "docs/work-groups/infrastructure-operations/infrastructure-requirements.md",
+      "git_blob_sha": "297b4ec149b21f6dd33a5dfdb099450bd7f00c2d",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/docs/work-groups/infrastructure-operations/infrastructure-requirements.md",
+      "sha256": "7a3c5ee172b12d95bd63c7f152ae5d74fe9f2840923f0fe08204805a3b27f88b"
+    },
+    {
+      "path": "docs/work-groups/security-privacy/README.md",
+      "git_blob_sha": "c72dcbbb10e31f275357ed07e9f4a710ab7ec598",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/docs/work-groups/security-privacy/README.md",
+      "sha256": "2b9d48723c014d600809fad71841710eed854f4a54ffa4435c44cbad03ec4121"
+    },
+    {
+      "path": "pyproject.toml",
+      "git_blob_sha": "30ed03b6297fc2f3cbd2ebf4552139e4fe4e95de",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/pyproject.toml",
+      "sha256": "9580b0f4ce28aa941f56bdfd8863d82df9391246387c0e76fc803b7c28c421ed"
+    },
+    {
+      "path": "src/tapestry/__init__.py",
+      "git_blob_sha": "9dc49d9f1b43d5e7b02a28eefc5d2639b8f490b5",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/src/tapestry/__init__.py",
+      "sha256": "719ac3543c7f9536b29bb25f94670b65398ffb6c3a5ddd0dd0afc599617a2cfa"
+    },
+    {
+      "path": "src/tapestry/evaluation/gates.py",
+      "git_blob_sha": "05a3235c691fcd4d8d6859d8a7cecf496971664c",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/src/tapestry/evaluation/gates.py",
+      "sha256": "2748a8b0ccff74a8af7d15ca232b57f158077f6b22236e2c3167b6355a8be93c"
+    },
+    {
+      "path": "src/tapestry/training/__init__.py",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/src/tapestry/training/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/tapestry/training/consortium/README.md",
+      "git_blob_sha": "e50b6d93e3dffa0582af77ec5d020b71a653a554",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/src/tapestry/training/consortium/README.md",
+      "sha256": "1f9f540bbea1ff03be0f1beb660a3ccc60519791a2ed1e5206da7270b27c136d"
+    },
+    {
+      "path": "src/tapestry/training/consortium/__init__.py",
+      "git_blob_sha": "b788dc34d700c161789210cca1b7fbef5dbacb2f",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/src/tapestry/training/consortium/__init__.py",
+      "sha256": "a69df51cc7d677a79c922f9a834febd963254c658e3517e2e8f56e58849067cb"
+    },
+    {
+      "path": "src/tapestry/training/consortium/coordinator.py",
+      "git_blob_sha": "721009e0eace59ee12c68b4e16b2e935ca9947c8",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/src/tapestry/training/consortium/coordinator.py",
+      "sha256": "efe651e61d13281e5f6ae7a84c8b181b2c5292f649ce69e70d39402556ec1ff4"
+    },
+    {
+      "path": "src/tapestry/training/consortium/merge.py",
+      "git_blob_sha": "d3b2f4022f65c5cd7554ce5baf9205e51ec4a1bf",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/src/tapestry/training/consortium/merge.py",
+      "sha256": "b435217a81daa6a73502544ed5b9ebbd7d1a083b1231ed58693da313975f3805"
+    },
+    {
+      "path": "src/tapestry/training/consortium/messages.py",
+      "git_blob_sha": "ef56323aec518897065202c7b15b01338d8a0a79",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/src/tapestry/training/consortium/messages.py",
+      "sha256": "6bfa36977d19291948eaeab9a55bfd1b3608d3684f6d09a20186bcb1c6dff1e6"
+    },
+    {
+      "path": "src/tapestry/training/consortium/model.py",
+      "git_blob_sha": "85e97aee4f3e1c7728c31857bb6d91e830de910e",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/src/tapestry/training/consortium/model.py",
+      "sha256": "d751579a58f9236947598a0f044e84160c520b121769ffb7d5270127d3f34cab"
+    },
+    {
+      "path": "src/tapestry/training/consortium/node.py",
+      "git_blob_sha": "07b7ef72499d6eb1f5e401f8d3b874aaf3b3bcc7",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/src/tapestry/training/consortium/node.py",
+      "sha256": "2f23ddf5224c4cfd197a872829a9619178b426c9b63fad40552f81642116d67c"
+    },
+    {
+      "path": "src/tapestry/training/consortium/policy.py",
+      "git_blob_sha": "3335f092fc4694d01b4790baadec92ad3b5c44f7",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/src/tapestry/training/consortium/policy.py",
+      "sha256": "0d978b759ab80886a7aac4aa176d2f38ae233c66406e103709a0a63bbb186936"
+    },
+    {
+      "path": "src/tests/tapestry/training/consortium/test_coordinator.py",
+      "git_blob_sha": "16782f69ac88c9512da5896b4222971c99a7e306",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/src/tests/tapestry/training/consortium/test_coordinator.py",
+      "sha256": "41c58b1e126b0cc2fa2ac6749eff7094290076d14f3ce7974ef6e541eec0115b"
+    },
+    {
+      "path": "src/tests/tapestry/training/consortium/test_merge.py",
+      "git_blob_sha": "34b6248d79ce0ab72528cb61bd36a74495044121",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/src/tests/tapestry/training/consortium/test_merge.py",
+      "sha256": "869bb5fccf686c4641eab6dec8d895699afe2d101892c6944873a07bddfdb64e"
+    },
+    {
+      "path": "src/tests/tapestry/training/consortium/test_policy.py",
+      "git_blob_sha": "521e3fc64ce4ce7a2affd45da0baa74c2c78a43c",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/src/tests/tapestry/training/consortium/test_policy.py",
+      "sha256": "949a837796ebca6b8133a7da1164568dc3d585331dd1611480b5b7cbcc0ba849"
+    },
+    {
+      "path": "src/tests/test_utils/hypothesis/__init__.py",
+      "git_blob_sha": "079b55bb2e101941498621ef9b8e288d2f43bb12",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/src/tests/test_utils/hypothesis/__init__.py",
+      "sha256": "6e861ad520a6874ba98fa5a5e9609205a412f1cdd4cef8d88cf3c078dbf95a00"
+    },
+    {
+      "path": "src/tests/test_utils/hypothesis/model_strategies.py",
+      "git_blob_sha": "442c228971802d2a0721d0fab8b320eb41b79141",
+      "raw_url": "https://raw.githubusercontent.com/The-AI-Alliance/tapestry/3d44c130b78c3b2ce4bd042603873d55ede89faf/src/tests/test_utils/hypothesis/model_strategies.py",
+      "sha256": "835a8e5f1267e06492925b7fb0d23ea22193591bdb08cb4d4cb52ddc0f807150"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "review_date": "2026-11-08",
+  "timezone": "Europe/Oslo",
+  "source_commit": "3d44c130b78c3b2ce4bd042603873d55ede89faf",
+  "environment": {
+    "device": "cpu",
+    "dtype": "float64",
+    "machine": "x86_64",
+    "platform": "Linux",
+    "python": "3.14.10",
+    "seed": 0,
+    "threads": 1,
+    "torch": "2.15.0+cpu"
+  },
+  "suites": [
+    {
+      "suite": "upstream-targeted",
+      "tests": 111,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "duration_seconds": 11.274
+    },
+    {
+      "suite": "experiment",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "duration_seconds": 1.448
+    }
+  ],
+  "commands": {
+    "upstream-targeted": "PYTHONPATH=\"$SOURCE_ROOT/src:$SOURCE_ROOT/contrib/build4me2-contribution-validator\" OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python -m pytest -q -o addopts='' \"$SOURCE_ROOT/src/tests/tapestry/training/consortium/test_policy.py\" \"$SOURCE_ROOT/src/tests/tapestry/training/consortium/test_merge.py\" \"$SOURCE_ROOT/src/tests/tapestry/training/consortium/test_coordinator.py\" \"$SOURCE_ROOT/contrib/build4me2-contribution-validator/tests/test_validator.py\" \"$SOURCE_ROOT/contrib/build4me2-contribution-validator/tests/test_fingerprint.py\"",
+    "experiment": "SOURCE_ROOT=\"$SOURCE_ROOT\" python -m pytest -q test_experiment.py"
+  },
+  "limits": [
+    "Selected upstream tests only; full make before-pr not run.",
+    "No upstream changes, deployment or network testing.",
+    "Additional security-sensitive probes are excluded from the public package."
+  ]
+}

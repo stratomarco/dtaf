@@ -1,0 +1,1116 @@
+{
+  "cases": [
+    {
+      "accepted": [
+        "alpha",
+        "beta",
+        "gamma"
+      ],
+      "all_weights_finite": true,
+      "cap_feasible_after_policy": true,
+      "cap_respected": true,
+      "case": "core-quality-cap1.0-gamma1",
+      "configured_cap": 1.0,
+      "fixed_local_states": {
+        "alpha": 0.0,
+        "beta": 2.0,
+        "gamma": 10.0
+      },
+      "fixture_sha256": "216b3ed27169faa53f273c547cd2580668e312802fed6b1784f5470f47e15d24",
+      "independent_scalar_oracle_matches": true,
+      "path": "core",
+      "quality_floor": 0.0,
+      "rejected": [],
+      "scores": {
+        "alpha": 1.0,
+        "beta": 1.0,
+        "gamma": 1.0
+      },
+      "shared_scalar": 3.9999999999999996,
+      "weight_sum": 1.0,
+      "weighting": "quality",
+      "weights": {
+        "alpha": 0.3333333333333333,
+        "beta": 0.3333333333333333,
+        "gamma": 0.3333333333333333
+      }
+    },
+    {
+      "accepted": [
+        "alpha",
+        "beta",
+        "gamma"
+      ],
+      "all_weights_finite": true,
+      "cap_feasible_after_policy": true,
+      "cap_respected": true,
+      "case": "core-quality-cap1.0-gamma9",
+      "configured_cap": 1.0,
+      "fixed_local_states": {
+        "alpha": 0.0,
+        "beta": 2.0,
+        "gamma": 10.0
+      },
+      "fixture_sha256": "216b3ed27169faa53f273c547cd2580668e312802fed6b1784f5470f47e15d24",
+      "independent_scalar_oracle_matches": true,
+      "path": "core",
+      "quality_floor": 0.0,
+      "rejected": [],
+      "scores": {
+        "alpha": 1.0,
+        "beta": 1.0,
+        "gamma": 9.0
+      },
+      "shared_scalar": 8.363636363636363,
+      "weight_sum": 1.0,
+      "weighting": "quality",
+      "weights": {
+        "alpha": 0.09090909090909091,
+        "beta": 0.09090909090909091,
+        "gamma": 0.8181818181818182
+      }
+    },
+    {
+      "accepted": [
+        "alpha",
+        "beta",
+        "gamma"
+      ],
+      "all_weights_finite": true,
+      "cap_feasible_after_policy": true,
+      "cap_respected": true,
+      "case": "core-quality-cap1.0-gamma1e+06",
+      "configured_cap": 1.0,
+      "fixed_local_states": {
+        "alpha": 0.0,
+        "beta": 2.0,
+        "gamma": 10.0
+      },
+      "fixture_sha256": "216b3ed27169faa53f273c547cd2580668e312802fed6b1784f5470f47e15d24",
+      "independent_scalar_oracle_matches": true,
+      "path": "core",
+      "quality_floor": 0.0,
+      "rejected": [],
+      "scores": {
+        "alpha": 1.0,
+        "beta": 1.0,
+        "gamma": 1000000.0
+      },
+      "shared_scalar": 9.999982000035999,
+      "weight_sum": 1.0,
+      "weighting": "quality",
+      "weights": {
+        "alpha": 9.99998000004e-07,
+        "beta": 9.99998000004e-07,
+        "gamma": 0.999998000004
+      }
+    },
+    {
+      "accepted": [
+        "alpha",
+        "beta",
+        "gamma"
+      ],
+      "all_weights_finite": true,
+      "cap_feasible_after_policy": true,
+      "cap_respected": true,
+      "case": "core-quality-cap0.5-gamma1",
+      "configured_cap": 0.5,
+      "fixed_local_states": {
+        "alpha": 0.0,
+        "beta": 2.0,
+        "gamma": 10.0
+      },
+      "fixture_sha256": "216b3ed27169faa53f273c547cd2580668e312802fed6b1784f5470f47e15d24",
+      "independent_scalar_oracle_matches": true,
+      "path": "core",
+      "quality_floor": 0.0,
+      "rejected": [],
+      "scores": {
+        "alpha": 1.0,
+        "beta": 1.0,
+        "gamma": 1.0
+      },
+      "shared_scalar": 3.9999999999999996,
+      "weight_sum": 1.0,
+      "weighting": "quality",
+      "weights": {
+        "alpha": 0.3333333333333333,
+        "beta": 0.3333333333333333,
+        "gamma": 0.3333333333333333
+      }
+    },
+    {
+      "accepted": [
+        "gamma",
+        "alpha",
+        "beta"
+      ],
+      "all_weights_finite": true,
+      "cap_feasible_after_policy": true,
+      "cap_respected": true,
+      "case": "core-quality-cap0.5-gamma9",
+      "configured_cap": 0.5,
+      "fixed_local_states": {
+        "alpha": 0.0,
+        "beta": 2.0,
+        "gamma": 10.0
+      },
+      "fixture_sha256": "216b3ed27169faa53f273c547cd2580668e312802fed6b1784f5470f47e15d24",
+      "independent_scalar_oracle_matches": true,
+      "path": "core",
+      "quality_floor": 0.0,
+      "rejected": [],
+      "scores": {
+        "alpha": 1.0,
+        "beta": 1.0,
+        "gamma": 9.0
+      },
+      "shared_scalar": 5.5,
+      "weight_sum": 1.0,
+      "weighting": "quality",
+      "weights": {
+        "alpha": 0.25,
+        "beta": 0.25,
+        "gamma": 0.5
+      }
+    },
+    {
+      "accepted": [
+        "gamma",
+        "alpha",
+        "beta"
+      ],
+      "all_weights_finite": true,
+      "cap_feasible_after_policy": true,
+      "cap_respected": true,
+      "case": "core-quality-cap0.5-gamma1e+06",
+      "configured_cap": 0.5,
+      "fixed_local_states": {
+        "alpha": 0.0,
+        "beta": 2.0,
+        "gamma": 10.0
+      },
+      "fixture_sha256": "216b3ed27169faa53f273c547cd2580668e312802fed6b1784f5470f47e15d24",
+      "independent_scalar_oracle_matches": true,
+      "path": "core",
+      "quality_floor": 0.0,
+      "rejected": [],
+      "scores": {
+        "alpha": 1.0,
+        "beta": 1.0,
+        "gamma": 1000000.0
+      },
+      "shared_scalar": 5.5,
+      "weight_sum": 1.0,
+      "weighting": "quality",
+      "weights": {
+        "alpha": 0.25,
+        "beta": 0.25,
+        "gamma": 0.5
+      }
+    },
+    {
+      "accepted": [
+        "alpha",
+        "beta",
+        "gamma"
+      ],
+      "all_weights_finite": true,
+      "cap_feasible_after_policy": true,
+      "cap_respected": true,
+      "case": "core-equal-cap0.5-gamma1",
+      "configured_cap": 0.5,
+      "fixed_local_states": {
+        "alpha": 0.0,
+        "beta": 2.0,
+        "gamma": 10.0
+      },
+      "fixture_sha256": "216b3ed27169faa53f273c547cd2580668e312802fed6b1784f5470f47e15d24",
+      "independent_scalar_oracle_matches": true,
+      "path": "core",
+      "quality_floor": 0.0,
+      "rejected": [],
+      "scores": {
+        "alpha": 1.0,
+        "beta": 1.0,
+        "gamma": 1.0
+      },
+      "shared_scalar": 3.9999999999999996,
+      "weight_sum": 1.0,
+      "weighting": "equal",
+      "weights": {
+        "alpha": 0.3333333333333333,
+        "beta": 0.3333333333333333,
+        "gamma": 0.3333333333333333
+      }
+    },
+    {
+      "accepted": [
+        "alpha",
+        "beta",
+        "gamma"
+      ],
+      "all_weights_finite": true,
+      "cap_feasible_after_policy": true,
+      "cap_respected": true,
+      "case": "core-equal-cap0.5-gamma9",
+      "configured_cap": 0.5,
+      "fixed_local_states": {
+        "alpha": 0.0,
+        "beta": 2.0,
+        "gamma": 10.0
+      },
+      "fixture_sha256": "216b3ed27169faa53f273c547cd2580668e312802fed6b1784f5470f47e15d24",
+      "independent_scalar_oracle_matches": true,
+      "path": "core",
+      "quality_floor": 0.0,
+      "rejected": [],
+      "scores": {
+        "alpha": 1.0,
+        "beta": 1.0,
+        "gamma": 9.0
+      },
+      "shared_scalar": 3.9999999999999996,
+      "weight_sum": 1.0,
+      "weighting": "equal",
+      "weights": {
+        "alpha": 0.3333333333333333,
+        "beta": 0.3333333333333333,
+        "gamma": 0.3333333333333333
+      }
+    },
+    {
+      "accepted": [
+        "alpha",
+        "beta",
+        "gamma"
+      ],
+      "all_weights_finite": true,
+      "cap_feasible_after_policy": true,
+      "cap_respected": true,
+      "case": "core-equal-cap0.5-gamma1e+06",
+      "configured_cap": 0.5,
+      "fixed_local_states": {
+        "alpha": 0.0,
+        "beta": 2.0,
+        "gamma": 10.0
+      },
+      "fixture_sha256": "216b3ed27169faa53f273c547cd2580668e312802fed6b1784f5470f47e15d24",
+      "independent_scalar_oracle_matches": true,
+      "path": "core",
+      "quality_floor": 0.0,
+      "rejected": [],
+      "scores": {
+        "alpha": 1.0,
+        "beta": 1.0,
+        "gamma": 1000000.0
+      },
+      "shared_scalar": 3.9999999999999996,
+      "weight_sum": 1.0,
+      "weighting": "equal",
+      "weights": {
+        "alpha": 0.3333333333333333,
+        "beta": 0.3333333333333333,
+        "gamma": 0.3333333333333333
+      }
+    },
+    {
+      "accepted": [
+        "gamma"
+      ],
+      "all_weights_finite": true,
+      "cap_feasible_after_policy": false,
+      "cap_respected": false,
+      "case": "core-quality-floor-shrink",
+      "configured_cap": 0.5,
+      "fixed_local_states": {
+        "alpha": 0.0,
+        "beta": 2.0,
+        "gamma": 10.0
+      },
+      "fixture_sha256": "216b3ed27169faa53f273c547cd2580668e312802fed6b1784f5470f47e15d24",
+      "independent_scalar_oracle_matches": true,
+      "path": "core",
+      "quality_floor": 0.5,
+      "rejected": [
+        "alpha",
+        "beta"
+      ],
+      "scores": {
+        "alpha": 0.1,
+        "beta": 0.1,
+        "gamma": 1.0
+      },
+      "shared_scalar": 10.0,
+      "weight_sum": 1.0,
+      "weighting": "quality",
+      "weights": {
+        "gamma": 1.0
+      }
+    },
+    {
+      "accepted": [
+        "gamma"
+      ],
+      "all_weights_finite": true,
+      "cap_feasible_after_policy": false,
+      "cap_respected": false,
+      "case": "core-equal-floor-shrink",
+      "configured_cap": 0.5,
+      "fixed_local_states": {
+        "alpha": 0.0,
+        "beta": 2.0,
+        "gamma": 10.0
+      },
+      "fixture_sha256": "216b3ed27169faa53f273c547cd2580668e312802fed6b1784f5470f47e15d24",
+      "independent_scalar_oracle_matches": true,
+      "path": "core",
+      "quality_floor": 0.5,
+      "rejected": [
+        "alpha",
+        "beta"
+      ],
+      "scores": {
+        "alpha": 0.1,
+        "beta": 0.1,
+        "gamma": 1.0
+      },
+      "shared_scalar": 10.0,
+      "weight_sum": 1.0,
+      "weighting": "equal",
+      "weights": {
+        "gamma": 1.0
+      }
+    },
+    {
+      "accepted": [
+        "alpha",
+        "beta"
+      ],
+      "all_weights_finite": true,
+      "cap_feasible_after_policy": true,
+      "cap_respected": true,
+      "case": "core-floor-boundary-0.49",
+      "configured_cap": 1.0,
+      "fixed_local_states": {
+        "alpha": 0.0,
+        "beta": 2.0,
+        "gamma": 10.0
+      },
+      "fixture_sha256": "216b3ed27169faa53f273c547cd2580668e312802fed6b1784f5470f47e15d24",
+      "independent_scalar_oracle_matches": true,
+      "path": "core",
+      "quality_floor": 0.5,
+      "rejected": [
+        "gamma"
+      ],
+      "scores": {
+        "alpha": 1.0,
+        "beta": 1.0,
+        "gamma": 0.49
+      },
+      "shared_scalar": 1.0,
+      "weight_sum": 1.0,
+      "weighting": "quality",
+      "weights": {
+        "alpha": 0.5,
+        "beta": 0.5
+      }
+    },
+    {
+      "accepted": [
+        "alpha",
+        "beta",
+        "gamma"
+      ],
+      "all_weights_finite": true,
+      "cap_feasible_after_policy": true,
+      "cap_respected": true,
+      "case": "core-floor-boundary-0.5",
+      "configured_cap": 1.0,
+      "fixed_local_states": {
+        "alpha": 0.0,
+        "beta": 2.0,
+        "gamma": 10.0
+      },
+      "fixture_sha256": "216b3ed27169faa53f273c547cd2580668e312802fed6b1784f5470f47e15d24",
+      "independent_scalar_oracle_matches": true,
+      "path": "core",
+      "quality_floor": 0.5,
+      "rejected": [],
+      "scores": {
+        "alpha": 1.0,
+        "beta": 1.0,
+        "gamma": 0.5
+      },
+      "shared_scalar": 2.8,
+      "weight_sum": 1.0,
+      "weighting": "quality",
+      "weights": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "gamma": 0.2
+      }
+    },
+    {
+      "accepted": [
+        "alpha",
+        "beta",
+        "gamma"
+      ],
+      "all_weights_finite": true,
+      "cap_feasible_after_policy": true,
+      "cap_respected": true,
+      "case": "validated-quality-cap1.0-gamma1",
+      "configured_cap": 1.0,
+      "fixed_local_states": {
+        "alpha": 0.0,
+        "beta": 2.0,
+        "gamma": 10.0
+      },
+      "fixture_sha256": "216b3ed27169faa53f273c547cd2580668e312802fed6b1784f5470f47e15d24",
+      "independent_scalar_oracle_matches": true,
+      "path": "validated",
+      "quality_floor": 0.0,
+      "rejected": [],
+      "scores": {
+        "alpha": 1.0,
+        "beta": 1.0,
+        "gamma": 1.0
+      },
+      "shared_scalar": 3.9999999999999996,
+      "validation": {
+        "admitted": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "findings": {
+          "alpha": [],
+          "beta": [],
+          "gamma": []
+        },
+        "min_admitted_nodes": 1,
+        "quorum_met_before_policy": true,
+        "rejected": []
+      },
+      "weight_sum": 1.0,
+      "weighting": "quality",
+      "weights": {
+        "alpha": 0.3333333333333333,
+        "beta": 0.3333333333333333,
+        "gamma": 0.3333333333333333
+      }
+    },
+    {
+      "accepted": [
+        "alpha",
+        "beta",
+        "gamma"
+      ],
+      "all_weights_finite": true,
+      "cap_feasible_after_policy": true,
+      "cap_respected": true,
+      "case": "validated-quality-cap1.0-gamma9",
+      "configured_cap": 1.0,
+      "fixed_local_states": {
+        "alpha": 0.0,
+        "beta": 2.0,
+        "gamma": 10.0
+      },
+      "fixture_sha256": "216b3ed27169faa53f273c547cd2580668e312802fed6b1784f5470f47e15d24",
+      "independent_scalar_oracle_matches": true,
+      "path": "validated",
+      "quality_floor": 0.0,
+      "rejected": [],
+      "scores": {
+        "alpha": 1.0,
+        "beta": 1.0,
+        "gamma": 9.0
+      },
+      "shared_scalar": 8.363636363636363,
+      "validation": {
+        "admitted": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "findings": {
+          "alpha": [],
+          "beta": [],
+          "gamma": []
+        },
+        "min_admitted_nodes": 1,
+        "quorum_met_before_policy": true,
+        "rejected": []
+      },
+      "weight_sum": 1.0,
+      "weighting": "quality",
+      "weights": {
+        "alpha": 0.09090909090909091,
+        "beta": 0.09090909090909091,
+        "gamma": 0.8181818181818182
+      }
+    },
+    {
+      "accepted": [
+        "alpha",
+        "beta",
+        "gamma"
+      ],
+      "all_weights_finite": true,
+      "cap_feasible_after_policy": true,
+      "cap_respected": true,
+      "case": "validated-quality-cap1.0-gamma1e+06",
+      "configured_cap": 1.0,
+      "fixed_local_states": {
+        "alpha": 0.0,
+        "beta": 2.0,
+        "gamma": 10.0
+      },
+      "fixture_sha256": "216b3ed27169faa53f273c547cd2580668e312802fed6b1784f5470f47e15d24",
+      "independent_scalar_oracle_matches": true,
+      "path": "validated",
+      "quality_floor": 0.0,
+      "rejected": [],
+      "scores": {
+        "alpha": 1.0,
+        "beta": 1.0,
+        "gamma": 1000000.0
+      },
+      "shared_scalar": 9.999982000035999,
+      "validation": {
+        "admitted": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "findings": {
+          "alpha": [],
+          "beta": [],
+          "gamma": []
+        },
+        "min_admitted_nodes": 1,
+        "quorum_met_before_policy": true,
+        "rejected": []
+      },
+      "weight_sum": 1.0,
+      "weighting": "quality",
+      "weights": {
+        "alpha": 9.99998000004e-07,
+        "beta": 9.99998000004e-07,
+        "gamma": 0.999998000004
+      }
+    },
+    {
+      "accepted": [
+        "alpha",
+        "beta",
+        "gamma"
+      ],
+      "all_weights_finite": true,
+      "cap_feasible_after_policy": true,
+      "cap_respected": true,
+      "case": "validated-quality-cap0.5-gamma1",
+      "configured_cap": 0.5,
+      "fixed_local_states": {
+        "alpha": 0.0,
+        "beta": 2.0,
+        "gamma": 10.0
+      },
+      "fixture_sha256": "216b3ed27169faa53f273c547cd2580668e312802fed6b1784f5470f47e15d24",
+      "independent_scalar_oracle_matches": true,
+      "path": "validated",
+      "quality_floor": 0.0,
+      "rejected": [],
+      "scores": {
+        "alpha": 1.0,
+        "beta": 1.0,
+        "gamma": 1.0
+      },
+      "shared_scalar": 3.9999999999999996,
+      "validation": {
+        "admitted": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "findings": {
+          "alpha": [],
+          "beta": [],
+          "gamma": []
+        },
+        "min_admitted_nodes": 1,
+        "quorum_met_before_policy": true,
+        "rejected": []
+      },
+      "weight_sum": 1.0,
+      "weighting": "quality",
+      "weights": {
+        "alpha": 0.3333333333333333,
+        "beta": 0.3333333333333333,
+        "gamma": 0.3333333333333333
+      }
+    },
+    {
+      "accepted": [
+        "gamma",
+        "alpha",
+        "beta"
+      ],
+      "all_weights_finite": true,
+      "cap_feasible_after_policy": true,
+      "cap_respected": true,
+      "case": "validated-quality-cap0.5-gamma9",
+      "configured_cap": 0.5,
+      "fixed_local_states": {
+        "alpha": 0.0,
+        "beta": 2.0,
+        "gamma": 10.0
+      },
+      "fixture_sha256": "216b3ed27169faa53f273c547cd2580668e312802fed6b1784f5470f47e15d24",
+      "independent_scalar_oracle_matches": true,
+      "path": "validated",
+      "quality_floor": 0.0,
+      "rejected": [],
+      "scores": {
+        "alpha": 1.0,
+        "beta": 1.0,
+        "gamma": 9.0
+      },
+      "shared_scalar": 5.5,
+      "validation": {
+        "admitted": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "findings": {
+          "alpha": [],
+          "beta": [],
+          "gamma": []
+        },
+        "min_admitted_nodes": 1,
+        "quorum_met_before_policy": true,
+        "rejected": []
+      },
+      "weight_sum": 1.0,
+      "weighting": "quality",
+      "weights": {
+        "alpha": 0.25,
+        "beta": 0.25,
+        "gamma": 0.5
+      }
+    },
+    {
+      "accepted": [
+        "gamma",
+        "alpha",
+        "beta"
+      ],
+      "all_weights_finite": true,
+      "cap_feasible_after_policy": true,
+      "cap_respected": true,
+      "case": "validated-quality-cap0.5-gamma1e+06",
+      "configured_cap": 0.5,
+      "fixed_local_states": {
+        "alpha": 0.0,
+        "beta": 2.0,
+        "gamma": 10.0
+      },
+      "fixture_sha256": "216b3ed27169faa53f273c547cd2580668e312802fed6b1784f5470f47e15d24",
+      "independent_scalar_oracle_matches": true,
+      "path": "validated",
+      "quality_floor": 0.0,
+      "rejected": [],
+      "scores": {
+        "alpha": 1.0,
+        "beta": 1.0,
+        "gamma": 1000000.0
+      },
+      "shared_scalar": 5.5,
+      "validation": {
+        "admitted": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "findings": {
+          "alpha": [],
+          "beta": [],
+          "gamma": []
+        },
+        "min_admitted_nodes": 1,
+        "quorum_met_before_policy": true,
+        "rejected": []
+      },
+      "weight_sum": 1.0,
+      "weighting": "quality",
+      "weights": {
+        "alpha": 0.25,
+        "beta": 0.25,
+        "gamma": 0.5
+      }
+    },
+    {
+      "accepted": [
+        "alpha",
+        "beta",
+        "gamma"
+      ],
+      "all_weights_finite": true,
+      "cap_feasible_after_policy": true,
+      "cap_respected": true,
+      "case": "validated-equal-cap0.5-gamma1",
+      "configured_cap": 0.5,
+      "fixed_local_states": {
+        "alpha": 0.0,
+        "beta": 2.0,
+        "gamma": 10.0
+      },
+      "fixture_sha256": "216b3ed27169faa53f273c547cd2580668e312802fed6b1784f5470f47e15d24",
+      "independent_scalar_oracle_matches": true,
+      "path": "validated",
+      "quality_floor": 0.0,
+      "rejected": [],
+      "scores": {
+        "alpha": 1.0,
+        "beta": 1.0,
+        "gamma": 1.0
+      },
+      "shared_scalar": 3.9999999999999996,
+      "validation": {
+        "admitted": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "findings": {
+          "alpha": [],
+          "beta": [],
+          "gamma": []
+        },
+        "min_admitted_nodes": 1,
+        "quorum_met_before_policy": true,
+        "rejected": []
+      },
+      "weight_sum": 1.0,
+      "weighting": "equal",
+      "weights": {
+        "alpha": 0.3333333333333333,
+        "beta": 0.3333333333333333,
+        "gamma": 0.3333333333333333
+      }
+    },
+    {
+      "accepted": [
+        "alpha",
+        "beta",
+        "gamma"
+      ],
+      "all_weights_finite": true,
+      "cap_feasible_after_policy": true,
+      "cap_respected": true,
+      "case": "validated-equal-cap0.5-gamma9",
+      "configured_cap": 0.5,
+      "fixed_local_states": {
+        "alpha": 0.0,
+        "beta": 2.0,
+        "gamma": 10.0
+      },
+      "fixture_sha256": "216b3ed27169faa53f273c547cd2580668e312802fed6b1784f5470f47e15d24",
+      "independent_scalar_oracle_matches": true,
+      "path": "validated",
+      "quality_floor": 0.0,
+      "rejected": [],
+      "scores": {
+        "alpha": 1.0,
+        "beta": 1.0,
+        "gamma": 9.0
+      },
+      "shared_scalar": 3.9999999999999996,
+      "validation": {
+        "admitted": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "findings": {
+          "alpha": [],
+          "beta": [],
+          "gamma": []
+        },
+        "min_admitted_nodes": 1,
+        "quorum_met_before_policy": true,
+        "rejected": []
+      },
+      "weight_sum": 1.0,
+      "weighting": "equal",
+      "weights": {
+        "alpha": 0.3333333333333333,
+        "beta": 0.3333333333333333,
+        "gamma": 0.3333333333333333
+      }
+    },
+    {
+      "accepted": [
+        "alpha",
+        "beta",
+        "gamma"
+      ],
+      "all_weights_finite": true,
+      "cap_feasible_after_policy": true,
+      "cap_respected": true,
+      "case": "validated-equal-cap0.5-gamma1e+06",
+      "configured_cap": 0.5,
+      "fixed_local_states": {
+        "alpha": 0.0,
+        "beta": 2.0,
+        "gamma": 10.0
+      },
+      "fixture_sha256": "216b3ed27169faa53f273c547cd2580668e312802fed6b1784f5470f47e15d24",
+      "independent_scalar_oracle_matches": true,
+      "path": "validated",
+      "quality_floor": 0.0,
+      "rejected": [],
+      "scores": {
+        "alpha": 1.0,
+        "beta": 1.0,
+        "gamma": 1000000.0
+      },
+      "shared_scalar": 3.9999999999999996,
+      "validation": {
+        "admitted": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "findings": {
+          "alpha": [],
+          "beta": [],
+          "gamma": []
+        },
+        "min_admitted_nodes": 1,
+        "quorum_met_before_policy": true,
+        "rejected": []
+      },
+      "weight_sum": 1.0,
+      "weighting": "equal",
+      "weights": {
+        "alpha": 0.3333333333333333,
+        "beta": 0.3333333333333333,
+        "gamma": 0.3333333333333333
+      }
+    },
+    {
+      "accepted": [
+        "alpha",
+        "beta"
+      ],
+      "all_weights_finite": true,
+      "cap_feasible_after_policy": true,
+      "cap_respected": true,
+      "case": "validated-floor-boundary-0.49",
+      "configured_cap": 1.0,
+      "fixed_local_states": {
+        "alpha": 0.0,
+        "beta": 2.0,
+        "gamma": 10.0
+      },
+      "fixture_sha256": "216b3ed27169faa53f273c547cd2580668e312802fed6b1784f5470f47e15d24",
+      "independent_scalar_oracle_matches": true,
+      "path": "validated",
+      "quality_floor": 0.5,
+      "rejected": [
+        "gamma"
+      ],
+      "scores": {
+        "alpha": 1.0,
+        "beta": 1.0,
+        "gamma": 0.49
+      },
+      "shared_scalar": 1.0,
+      "validation": {
+        "admitted": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "findings": {
+          "alpha": [],
+          "beta": [],
+          "gamma": []
+        },
+        "min_admitted_nodes": 1,
+        "quorum_met_before_policy": true,
+        "rejected": []
+      },
+      "weight_sum": 1.0,
+      "weighting": "quality",
+      "weights": {
+        "alpha": 0.5,
+        "beta": 0.5
+      }
+    },
+    {
+      "accepted": [
+        "alpha",
+        "beta",
+        "gamma"
+      ],
+      "all_weights_finite": true,
+      "cap_feasible_after_policy": true,
+      "cap_respected": true,
+      "case": "validated-floor-boundary-0.5",
+      "configured_cap": 1.0,
+      "fixed_local_states": {
+        "alpha": 0.0,
+        "beta": 2.0,
+        "gamma": 10.0
+      },
+      "fixture_sha256": "216b3ed27169faa53f273c547cd2580668e312802fed6b1784f5470f47e15d24",
+      "independent_scalar_oracle_matches": true,
+      "path": "validated",
+      "quality_floor": 0.5,
+      "rejected": [],
+      "scores": {
+        "alpha": 1.0,
+        "beta": 1.0,
+        "gamma": 0.5
+      },
+      "shared_scalar": 2.8,
+      "validation": {
+        "admitted": [
+          "alpha",
+          "beta",
+          "gamma"
+        ],
+        "findings": {
+          "alpha": [],
+          "beta": [],
+          "gamma": []
+        },
+        "min_admitted_nodes": 1,
+        "quorum_met_before_policy": true,
+        "rejected": []
+      },
+      "weight_sum": 1.0,
+      "weighting": "quality",
+      "weights": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "gamma": 0.2
+      }
+    },
+    {
+      "accepted": [],
+      "all_weights_finite": true,
+      "cap_feasible_after_policy": false,
+      "cap_respected": true,
+      "case": "validated-quorum-blocks",
+      "configured_cap": 0.5,
+      "fixed_local_states": {
+        "alpha": 0.0,
+        "beta": 2.0
+      },
+      "fixture_sha256": "c2ffe76df55445e32bbbc776d716144787892dbfbcf5ba59c439baace0daae6c",
+      "independent_scalar_oracle_matches": true,
+      "path": "validated",
+      "quality_floor": 0.0,
+      "rejected": [
+        "alpha",
+        "beta"
+      ],
+      "scores": {
+        "alpha": 1.0,
+        "beta": 1.0
+      },
+      "shared_scalar": 0.0,
+      "validation": {
+        "admitted": [
+          "alpha",
+          "beta"
+        ],
+        "findings": {
+          "alpha": [],
+          "beta": []
+        },
+        "min_admitted_nodes": 3,
+        "quorum_met_before_policy": false,
+        "rejected": []
+      },
+      "weight_sum": 0,
+      "weighting": "quality",
+      "weights": {}
+    },
+    {
+      "accepted": [
+        "alpha",
+        "beta"
+      ],
+      "all_weights_finite": true,
+      "cap_feasible_after_policy": true,
+      "cap_respected": true,
+      "case": "validated-tensor-nan-rejected",
+      "configured_cap": 0.5,
+      "fixed_local_states": {
+        "alpha": 0.0,
+        "beta": 2.0,
+        "gamma": "NaN"
+      },
+      "fixture_sha256": "fb5642e7fd1d2757ba1277675db0486605ef8ceecece928ea312481b62e4e2c7",
+      "independent_scalar_oracle_matches": null,
+      "path": "validated",
+      "quality_floor": 0.0,
+      "rejected": [
+        "gamma"
+      ],
+      "scores": {
+        "alpha": 1.0,
+        "beta": 1.0,
+        "gamma": 1.0
+      },
+      "shared_scalar": 1.0,
+      "validation": {
+        "admitted": [
+          "alpha",
+          "beta"
+        ],
+        "findings": {
+          "alpha": [],
+          "beta": [],
+          "gamma": [
+            "non-finite"
+          ]
+        },
+        "min_admitted_nodes": 1,
+        "quorum_met_before_policy": true,
+        "rejected": [
+          "gamma"
+        ]
+      },
+      "weight_sum": 1.0,
+      "weighting": "quality",
+      "weights": {
+        "alpha": 0.5,
+        "beta": 0.5
+      }
+    }
+  ],
+  "environment": {
+    "device": "cpu",
+    "dtype": "float64",
+    "machine": "x86_64",
+    "platform": "Linux",
+    "python": "3.14.10",
+    "seed": 0,
+    "threads": 1,
+    "torch": "2.15.0+cpu"
+  },
+  "runner_sha256": "56777919e862bca990140f6ba5a9b3a1d7177dc5571e165db667779dea7cf181",
+  "schema_version": 1,
+  "scope": "Unmodified coordinator and merge; fixed one-parameter nodes; no local training or network",
+  "source_commit": "3d44c130b78c3b2ce4bd042603873d55ede89faf",
+  "sources_manifest_sha256": "3b096c80f43db3d79a9492a432806401fbb02d8843d3b585c4979f61a3e3b9fc"
+}

@@ -78,6 +78,9 @@ There are no checkboxes. Every check requires written evidence notes.
 
 ## Files
 
+- [Source-backed update-admission review](reviews/update-admission/README.md) — pinned implementation map, focused threat model, evidence and pending decisions
+- [Aggregation influence experiment](experiments/aggregation-influence/README.md) — executable metadata sweeps with recorded results and reproduction instructions
+
 - `DTAF_v01.md` — canonical framework with all six domains, all 72 checks, and the reference list
 - [Assessment and evidence guide](docs/assessment-evidence-guide.md) — independent dimensions and legacy migration
 - [Reusable security materials](security/README.md) — framework-neutral entry point for project contributions

@@ -8,6 +8,12 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Applied evidence-based review
+- Add a pinned-source admission-path review, focused threat model, evidence and residual-risk records, and a draft maintainer review request.
+- Add reproducible metadata-influence measurements through unmodified upstream coordinator and merge code, source digests, 26 recorded CPU cases and dependency versions.
+- Record 111 passing targeted upstream tests and eight passing experiment tests. The full upstream pre-PR check and deployment security were not assessed.
+
+
 ### Security assessment improvements
 - Separate completion, control effectiveness, implementation, verification and operational evidence across all 72 checks.
 - Add justified not-applicable decisions and independent residual-risk decisions, with migration guidance for A/RR/BC records.
