@@ -6,6 +6,19 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [Unreleased]
+
+### Fixed
+- The 0.1.0 entry listed `instrument/DTAF_v01_instrument.docx` as added. The file is not in the repository. It is planned.
+- Withdrew two claims from the 0.1.0 entry: "verified citations" and "MITRE ATLAS technique IDs verified at time of writing". Only the reference entries added below were checked against publisher or official pages. The older reference entries have not been systematically re-verified. The ATLAS IDs were checked on atlas.mitre.org on 7 November 2026.
+- Removed superseded ATLAS technique names from three checks (DE-T-4, CN-O-4, CN-B-1). ATLAS renames techniques between releases, so those checks now cite the ID only.
+- Added four sources that the text cited but the reference list lacked: Shaw and Nave (2026), Edmans (2024), OWASP API Security Top 10 (2023), and Northcutt, Jiang and Chuang (2021) for CleanLab.
+- Removed "Reference list complete" from the status line of `DTAF_v01.md`. Some checks cite sources only generically (for example "published research on multi-turn jailbreaking") and have no reference entry.
+
+### Changed
+- CN-T-4 (Adversarial Input Entry Point Mapping) now cites AML.T0051 (LLM Prompt Injection) instead of AML.T0049, because the check is about prompt inputs.
+- README status changed from private to public draft, and the README no longer describes the reference list as complete.
+
 ## [0.1.0] — 2026-07-23
 
 ### Added
