@@ -1,7 +1,7 @@
 # Double Trinity Assessment Framework (DTAF)
 
 **Version:** 0.1 — Draft  
-**Status:** Private — pending public release alongside the Double Trinity article series
+**Status:** Public draft. Feedback and corrections welcome.
 
 ---
 
@@ -39,7 +39,7 @@ The DTAF is grounded in:
 - BIML ML Security Risk Framework — architectural ML risks, the closest existing work to what the DTAF addresses
 - MITRE ATLAS — adversarial threat catalog for AI systems
 - NIST AI RMF — governance vocabulary and risk management structure
-- Shaw and Nave, "Thinking — Fast, Slow, and Artificial" (Wharton, 2026) — empirical grounding for the human layer prompts
+- Shaw and Nave, "Thinking—Fast, Slow, and Artificial" (Wharton, 2026) — empirical grounding for the human layer prompts
 - Alex Edmans, *May Contain Lies* (2024) — narrative and evidence bias in evaluation
 
 The framework builds on these rather than duplicating them. Where they cover something well, the DTAF references and integrates.
@@ -77,7 +77,7 @@ There are no checkboxes. Every check requires written evidence notes.
 
 ## Files
 
-- `DTAF_v01.md` — canonical framework with all six domains, all 72 checks, and the complete reference list
+- `DTAF_v01.md` — canonical framework with all six domains, all 72 checks, and the reference list
 - `instrument/DTAF_v01_instrument.docx` — Word practitioner instrument for working through and recording assessments *(coming soon)*
 
 ---

@@ -1,7 +1,7 @@
 # Double Trinity Assessment Framework (DTAF)
 **Version:** 0.1 — Draft  
-**Status:** v0.1 Draft — All six domains complete. Trust Map Summary present. Reference list complete.  
-**A note on MITRE ATLAS technique IDs:** ATLAS is a living framework updated regularly. Technique IDs referenced in this document were verified at time of writing but may change across ATLAS versions. Always consult https://atlas.mitre.org for current technique mappings before citing specific IDs in assessments or reports.
+**Status:** v0.1 Draft. All six domains complete. Trust Map Summary present.  
+**A note on MITRE ATLAS technique IDs:** ATLAS is a living framework and renames or restructures techniques between releases. This document cites technique IDs without names, and the IDs themselves may change. The IDs were checked against https://atlas.mitre.org on 7 November 2026. Check them again before citing them in an assessment or report.
 
 **Grounded in:** McGraw & Hoglund, *Exploiting Software* (2004); Thompson, "Reflections on Trusting Trust" (1984); BIML ML Security Risk Framework; MITRE ATLAS; NIST AI RMF; Shaw & Nave, Tri-System Theory (2026); Edmans, *May Contain Lies* (2024).
 
@@ -287,7 +287,7 @@ The Edmans failure is most acute here. Write down the narrative you have already
 
 *Evidence to gather:* QA reports, preprocessing logs, anomaly detection outputs, data validation records.
 
-*Grounded in:* CleanLab (dataset quality tooling); BIML ML Security Risk Framework.
+*Grounded in:* CleanLab (dataset quality tooling; Northcutt, Jiang & Chuang, 2021); BIML ML Security Risk Framework.
 
 *Boundary:* Quality checks detect statistical anomalies. Not designed to detect sophisticated poisoning engineered to be statistically indistinguishable.
 
@@ -305,7 +305,7 @@ The Edmans failure is most acute here. Write down the narrative you have already
 
 *Evidence to gather:* Pipeline architecture review, external data integration points, access records, threat model documentation.
 
-*Grounded in:* MITRE ATLAS AML.T0020 (Poison Training Data); BIML ML Security Risk Framework.
+*Grounded in:* MITRE ATLAS AML.T0020; BIML ML Security Risk Framework.
 
 *Boundary:* Threat modeling, not detection. An unmapped injection point is a gap, not a clean finding.
 
@@ -341,7 +341,7 @@ The Edmans failure is most acute here. Write down the narrative you have already
 
 *What to examine:* Advanced statistical analysis of training data distributions for poisoning anomalies.
 
-*Reference:* Spectral Signatures in Backdoor Attacks (Tran, Li & Madry, NeurIPS 2018); Activation Clustering (Chen et al., AAAI 2019); CleanLab.
+*Reference:* Spectral Signatures in Backdoor Attacks (Tran, Li & Madry, NeurIPS 2018); Activation Clustering (Chen et al., AAAI 2019); CleanLab (Northcutt, Jiang & Chuang, 2021).
 
 *Ceiling:* Requires specialist ML security expertise. Scope to highest-risk datasets or engage specialist. If BC, document which datasets are unverified.
 
@@ -481,7 +481,7 @@ Write down the assumptions you are making about the security of each connectivit
 
 *Evidence to gather:* Sourcing records, repository URLs and commit hashes at download, approval records.
 
-*Grounded in:* OpenSSF Model Signing Specification; MITRE ATLAS AML.T0010 (ML Supply Chain Compromise).
+*Grounded in:* OpenSSF Model Signing Specification; MITRE ATLAS AML.T0010.
 
 *Boundary:* Records claimed provenance. Does not verify model behavior under adversarial conditions.
 
@@ -519,7 +519,7 @@ Write down the assumptions you are making about the security of each connectivit
 
 *Evidence to gather:* Access control test results, records of gaps found, remediation records.
 
-*Grounded in:* NIST AI RMF; OWASP API Security Top 10; BIML.
+*Grounded in:* NIST AI RMF; OWASP API Security Top 10 (2023); BIML.
 
 *Boundary:* Covers access paths identified through architecture review. Novel paths remain unverified.
 
@@ -573,7 +573,7 @@ Write down the assumptions you are making about the security of each connectivit
 
 *Evidence to gather:* Input path documentation, validation controls at each entry point, input boundary test results.
 
-*Grounded in:* MITRE ATLAS AML.T0049; OWASP Top 10 for LLMs 2025 (LLM01); BIML.
+*Grounded in:* MITRE ATLAS AML.T0051; OWASP Top 10 for LLMs 2025 (LLM01); BIML.
 
 *Boundary:* Maps identified entry points. Novel input paths not in documented architecture are a gap in the map.
 
@@ -609,7 +609,7 @@ Write down the assumptions you are making about the security of each connectivit
 
 *What to examine:* Can the model be systematically queried to reconstruct its behavior or extract capabilities through the inference API?
 
-*Reference:* MITRE ATLAS (Exfiltration via ML Inference API); Tramèr, Zhang, Juels, Reiter & Ristenpart (2016), "Stealing Machine Learning Models via Prediction APIs," *USENIX Security 2016*, pp. 601–618.
+*Reference:* MITRE ATLAS AML.T0024; Tramèr, Zhang, Juels, Reiter & Ristenpart (2016), "Stealing Machine Learning Models via Prediction APIs," *USENIX Security 2016*, pp. 601–618.
 
 *Ceiling:* Requires specialist knowledge and significant query budget. Scope to defined extraction vectors. If BC, document what was not tested.
 
@@ -1782,6 +1782,8 @@ When a system cannot be examined, practitioners accept its outputs rather than s
 
 **OWASP Top 10 for LLM Applications 2025.** LLM01 Prompt Injection, LLM02 Sensitive Information Disclosure, LLM03 Supply Chain, LLM04 Data and Model Poisoning, LLM05 Improper Output Handling, LLM06 Excessive Agency, LLM07 System Prompt Leakage, LLM08 Vector and Embedding Weaknesses, LLM09 Misinformation, LLM10 Unbounded Consumption. https://owasp.org/www-project-top-10-for-large-language-model-applications/
 
+**OWASP API Security Top 10 2023.** OWASP Foundation. https://owasp.org/API-Security/editions/2023/en/0x11-t10/
+
 **OpenSSF Model Signing Specification.** https://github.com/sigstore/model-transparency
 
 **C2PA.** https://c2pa.org/
@@ -1800,6 +1802,8 @@ Tran, B., Li, J., & Madry, A. (2018). Spectral signatures in backdoor attacks. *
 
 Chen, B. et al. (2019). Detecting backdoor attacks by activation clustering. *AAAI Workshop on AI Safety*.
 
+Northcutt, C. G., Jiang, L., & Chuang, I. L. (2021). Confident learning: Estimating uncertainty in dataset labels. *Journal of Artificial Intelligence Research*, 70, 1373–1411. https://doi.org/10.1613/jair.1.12125
+
 Wang, B. et al. (2019). Neural cleanse. *IEEE S&P 2019*, 707–723.
 
 Hubinger, E. et al. (2024). Sleeper agents. *arXiv:2401.05566*. Anthropic.
@@ -1817,6 +1821,10 @@ Thompson, K. (1984). Reflections on trusting trust. *Communications of the ACM*,
 McGraw, G., & Hoglund, G. (2004). *Exploiting Software: How to Break Code*. Addison-Wesley.
 
 Anderson, R. (2020). *Security Engineering* (3rd ed.). Wiley.
+
+Shaw, S. D., & Nave, G. (2026). Thinking—Fast, Slow, and Artificial: How AI is reshaping human reasoning and the rise of cognitive surrender. SSRN preprint, 11 January 2026. https://doi.org/10.2139/ssrn.6097646
+
+Edmans, A. (2024). *May Contain Lies: How Stories, Statistics, and Studies Exploit Our Biases—And What We Can Do about It*. University of California Press.
 
 Wei, J. et al. (2022). Emergent abilities of large language models. *Transactions on Machine Learning Research*.
 
