@@ -22,9 +22,9 @@ The output is a **trust map**: a structured characterization of posture, evidenc
 | 1 | Connectivity | Inherited from software security | The attack surface has no perimeter |
 | 2 | Extensibility | Inherited from software security | Behavior can be added or changed at runtime |
 | 3 | Complexity | Inherited from software security | The system cannot be fully understood by its builders |
-| 4 | Opacity | Native to ML | The system cannot be meaningfully inspected |
+| 4 | Opacity | Native to ML | Inspection and interpretation provide bounded evidence about model behavior |
 | 5 | Data Entanglement | Native to ML | The training pipeline is the attack surface |
-| 6 | Adaptability | Native to ML | Security properties do not persist across model updates |
+| 6 | Adaptability | Native to ML | Security properties require revalidation after relevant model updates |
 
 The first three are inherited from McGraw and Hoglund's Trinity of Trouble (*Exploiting Software*, 2004). The second three are native to machine learning. Together they form the Double Trinity — two generations of structural risk, compounding each other.
 
@@ -63,10 +63,11 @@ Each of the six domains contains three tiers of checks:
 - **Testable** — requires deliberate effort and standard security competency, completable in days
 - **Bounded Investigation** — requires specialist knowledge; depth is explicitly capped; routes to documented scope or explicit residual risk
 
-Each check has three possible statuses:
+Each check records assessment completion, control effectiveness, evidence and residual risk independently. See the [assessment and evidence guide](docs/assessment-evidence-guide.md) for definitions and migration from the original statuses.
 
-| Status | Meaning |
-|---|---|
+Completed does not mean effective. Not applicable requires a scope rationale and reviewer; unavailable evidence remains a limitation.
+
+---|---|
 | **A** — Assessed | Check completed. Evidence documented. |
 | **RR** — Carried as Residual Risk | Gap explicitly documented and owned. Residual risk notes required. |
 | **BC** — Beyond Current Capacity | Expertise or access not available. Scope or specialist engagement documented. |
@@ -78,7 +79,15 @@ There are no checkboxes. Every check requires written evidence notes.
 ## Files
 
 - `DTAF_v01.md` — canonical framework with all six domains, all 72 checks, and the reference list
-- `instrument/DTAF_v01_instrument.docx` — Word practitioner instrument for working through and recording assessments *(coming soon)*
+- [Assessment and evidence guide](docs/assessment-evidence-guide.md) — independent dimensions and legacy migration
+- [Reusable security materials](security/README.md) — framework-neutral entry point for project contributions
+- [Threat model template](templates/threat-model.md) — scope, scenarios, expectations and verification
+- [Assessment record](templates/assessment-record.md), [evidence register](templates/evidence-register.md), and [residual risk register](templates/residual-risk-register.md)
+- [Fictional update-admission example](examples/update-admission.md) — design exercise, with no repository findings or executed tests
+- [Contribution review checklist](docs/contribution-review.md)
+- [Changelog](CHANGELOG.md) — changes and limitations
+
+Start with the scope and pinned system version, then record threats, controls, evidence and unresolved decisions. Review the example before filling in the templates. The Word instrument remains planned and is not included.
 
 ---
 

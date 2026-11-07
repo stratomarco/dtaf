@@ -49,9 +49,9 @@ Every check in this framework satisfies all six of the following:
 | 1 | Connectivity | Inherited | The attack surface has no perimeter |
 | 2 | Extensibility | Inherited | Behavior can be added or changed at runtime |
 | 3 | Complexity | Inherited | The system cannot be fully understood by its builders |
-| 4 | Opacity | Native to ML | The system cannot be meaningfully inspected |
+| 4 | Opacity | Native to ML | Inspection and interpretation provide bounded evidence about model behavior |
 | 5 | Data Entanglement | Native to ML | The training pipeline is the attack surface |
-| 6 | Adaptability | Native to ML | Security properties do not persist across model updates |
+| 6 | Adaptability | Native to ML | Security properties require revalidation after relevant model updates |
 
 ---
 
@@ -63,15 +63,20 @@ Every check in this framework satisfies all six of the following:
 
 **Step 3 — Work through each domain** in order: Data Entanglement, Connectivity, Extensibility, Adaptability, Complexity, Opacity. The order moves from most tractable to least. Completing the earlier domains will build context for the harder ones.
 
-**Step 4 — For each check, record a status and evidence notes.** Status has three values only:
+**Step 4 — Record independent assessment dimensions for every check.**
 
-| Status | Meaning |
+Use the definitions in [Assessment and evidence guide](docs/assessment-evidence-guide.md). Completion describes the investigation, not whether a control works.
+
+| Dimension | Values and requirements |
 |---|---|
-| **A** — Assessed | The check was completed. Evidence is documented. |
-| **RR** — Carried as Residual Risk | The check could not be fully completed. The gap is explicitly documented and owned. |
-| **BC** — Beyond Current Capacity | The check requires expertise or access not available. Scope or specialist engagement is documented. |
+| Assessment completion | Completed / Partial / Not assessed / Not applicable. Record scope and rationale; not applicable requires a justified scope exclusion and reviewer. |
+| Control effectiveness | Effective within tested scope / Ineffective / Inconclusive / Not applicable. Record the security expectation and evidence supporting the outcome. |
+| Evidence | Record implementation, verification, and operational evidence independently, with evidence IDs and limitations. |
+| Residual risk | Record remaining exposure, uncertainty, treatment, implementation owner, acceptance authority, decision and review trigger. |
 
-There are no checkboxes. Every check requires written evidence notes. If a check is RR or BC, residual risk notes are required.
+Missing access or expertise is a limitation, not a not-applicable decision. A completed investigation can find an ineffective control. An effective control can leave residual risk. Do not infer effectiveness from completion or documentation alone.
+
+Legacy migration: A becomes Completed only if the recorded investigation supports that conclusion; effectiveness remains Inconclusive until justified. RR becomes a linked risk record plus an independently selected completion status. BC becomes Partial or Not assessed with a capacity/access limitation and follow-up. Preserve historical evidence and decisions; do not translate RR or BC into effectiveness.
 
 **Step 5 — Complete the Domain Residual Risk Register** at the end of each domain.
 
@@ -163,11 +168,19 @@ The Edmans failure is most acute here. Write down the narrative you have already
 
 *Boundary:* Documentation records stated intent. It does not verify whether the data source was compromised before documentation was created.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -179,13 +192,21 @@ The Edmans failure is most acute here. Write down the narrative you have already
 
 *Grounded in:* BIML ML Security Risk Framework; NIST AI RMF (Map 1.6).
 
-*Boundary:* An incomplete inventory is itself a finding, not a reason to mark this assessed.
+*Boundary:* An incomplete inventory is itself a finding, a reason to record an ineffective inventory control even when the investigation is completed.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -199,11 +220,19 @@ The Edmans failure is most acute here. Write down the narrative you have already
 
 *Boundary:* Agreements establish legal provenance. They do not verify data integrity or absence of malicious content.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -217,11 +246,19 @@ The Edmans failure is most acute here. Write down the narrative you have already
 
 *Boundary:* Documentation reflects design intent. Runtime behavior may differ from documented design.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -233,13 +270,21 @@ The Edmans failure is most acute here. Write down the narrative you have already
 
 *Grounded in:* Model Cards for Model Reporting (Mitchell et al., 2019).
 
-*Boundary:* Pretraining data for foundation models is not assessable at internal tier. A = boundary documented, not foundation model data assessed.
+*Boundary:* Pretraining data for foundation models is not assessable at internal tier. Completed = boundary documented, not foundation model data assessed.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -255,11 +300,19 @@ The Edmans failure is most acute here. Write down the narrative you have already
 
 *Boundary:* Verifies no modification after hashing. Does not verify data was clean when first hashed.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -273,11 +326,19 @@ The Edmans failure is most acute here. Write down the narrative you have already
 
 *Boundary:* Records who had access. Does not record whether authorized access was used maliciously.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -291,11 +352,19 @@ The Edmans failure is most acute here. Write down the narrative you have already
 
 *Boundary:* Quality checks detect statistical anomalies. Not designed to detect sophisticated poisoning engineered to be statistically indistinguishable.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -309,11 +378,19 @@ The Edmans failure is most acute here. Write down the narrative you have already
 
 *Boundary:* Threat modeling, not detection. An unmapped injection point is a gap, not a clean finding.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -327,11 +404,19 @@ The Edmans failure is most acute here. Write down the narrative you have already
 
 *Boundary:* Tests anticipated scenarios. Novel injection approaches remain undetected. Continuous concern, not one-time assessment.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -343,13 +428,21 @@ The Edmans failure is most acute here. Write down the narrative you have already
 
 *Reference:* Spectral Signatures in Backdoor Attacks (Tran, Li & Madry, NeurIPS 2018); Activation Clustering (Chen et al., AAAI 2019); CleanLab (Northcutt, Jiang & Chuang, 2021).
 
-*Ceiling:* Requires specialist ML security expertise. Scope to highest-risk datasets or engage specialist. If BC, document which datasets are unverified.
+*Ceiling:* Requires specialist ML security expertise. Scope to highest-risk datasets or engage specialist. If access or expertise is unavailable, document which datasets are unverified.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Scope documented:** *(what was assessed, what was not, and why)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -359,19 +452,27 @@ The Edmans failure is most acute here. Write down the narrative you have already
 
 *Reference:* MITRE ATLAS AML.T0020; BadNets (Gu, Dolan-Gavitt & Garg, 2017); Neural Cleanse (Wang et al., IEEE S&P 2019); Sleeper Agents (Hubinger et al., Anthropic, 2024).
 
-*Ceiling:* Requires adversarial expertise and a defined threat model. Scope to highest-risk inputs. If BC, document trigger types not tested.
+*Ceiling:* Requires adversarial expertise and a defined threat model. Scope to highest-risk inputs. If access or expertise is unavailable, document trigger types not tested.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Scope documented:** *(what was tested, what was not, and why)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
 ## Domain Residual Risk Register — Data Entanglement
 
-| Item ID | Description of Gap | Reason Not Fully Assessed | Risk Owner | Review Date |
+| Risk ID / Check ID | Remaining exposure or uncertainty | Evidence / limitation | Treatment owner / acceptance authority | Decision / review date |
 |---|---|---|---|---|
 | | | | | |
 | | | | | |
@@ -431,11 +532,19 @@ Write down the assumptions you are making about the security of each connectivit
 
 *Boundary:* Inventory records what is known. Review infrastructure configuration directly, not just documentation.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -449,11 +558,19 @@ Write down the assumptions you are making about the security of each connectivit
 
 *Boundary:* Transitive dependencies are rarely fully catalogued.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -467,11 +584,19 @@ Write down the assumptions you are making about the security of each connectivit
 
 *Boundary:* Documents intended controls. Implementation correctness requires testable checks.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -485,11 +610,19 @@ Write down the assumptions you are making about the security of each connectivit
 
 *Boundary:* Records claimed provenance. Does not verify model behavior under adversarial conditions.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -503,11 +636,19 @@ Write down the assumptions you are making about the security of each connectivit
 
 *Boundary:* Documents intended trust architecture. Enforcement in practice requires testable checks.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -523,11 +664,19 @@ Write down the assumptions you are making about the security of each connectivit
 
 *Boundary:* Covers access paths identified through architecture review. Novel paths remain unverified.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -541,11 +690,19 @@ Write down the assumptions you are making about the security of each connectivit
 
 *Boundary:* Confirms artifact matches what the signer published. Does not verify signer trustworthiness.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -559,11 +716,19 @@ Write down the assumptions you are making about the security of each connectivit
 
 *Boundary:* Covers currently exposed endpoints. Re-run after significant infrastructure changes.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -577,11 +742,19 @@ Write down the assumptions you are making about the security of each connectivit
 
 *Boundary:* Maps identified entry points. Novel input paths not in documented architecture are a gap in the map.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -595,11 +768,19 @@ Write down the assumptions you are making about the security of each connectivit
 
 *Boundary:* Covers in-scope inter-component paths. Document what was and was not tested.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -611,13 +792,21 @@ Write down the assumptions you are making about the security of each connectivit
 
 *Reference:* MITRE ATLAS AML.T0024; Tramèr, Zhang, Juels, Reiter & Ristenpart (2016), "Stealing Machine Learning Models via Prediction APIs," *USENIX Security 2016*, pp. 601–618.
 
-*Ceiling:* Requires specialist knowledge and significant query budget. Scope to defined extraction vectors. If BC, document what was not tested.
+*Ceiling:* Requires specialist knowledge and significant query budget. Scope to defined extraction vectors. If access or expertise is unavailable, document what was not tested.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Scope documented:** *(what was tested, what was not, and why)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -627,19 +816,27 @@ Write down the assumptions you are making about the security of each connectivit
 
 *Reference:* MITRE ATLAS AML.T0020 (federated learning context); Blanchard, El Mhamdi, Guerraoui & Stainer (2017), "Machine Learning with Adversaries: Byzantine Tolerant Gradient Descent," *NeurIPS 2017*, pp. 118–128.
 
-*Ceiling:* Requires specialist expertise and access to federation architecture. If BC, document unverified nodes.
+*Ceiling:* Requires specialist expertise and access to federation architecture. If access or expertise is unavailable, document unverified nodes.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Scope documented:** *(what was tested, what was not, and why)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
 ## Domain Residual Risk Register — Connectivity
 
-| Item ID | Description of Gap | Reason Not Fully Assessed | Risk Owner | Review Date |
+| Risk ID / Check ID | Remaining exposure or uncertainty | Evidence / limitation | Treatment owner / acceptance authority | Decision / review date |
 |---|---|---|---|---|
 | | | | | |
 | | | | | |
@@ -699,11 +896,19 @@ Write down what adversarial inputs you have assumed are unlikely to work and why
 
 *Boundary:* Inventory reflects documented extension points. Undocumented ones are a gap in the map.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -717,11 +922,19 @@ Write down what adversarial inputs you have assumed are unlikely to work and why
 
 *Boundary:* Documents intended scope. Absence of formal scope decisions is itself a finding.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -735,11 +948,19 @@ Write down what adversarial inputs you have assumed are unlikely to work and why
 
 *Boundary:* Access controls govern authorized modification. Do not prevent adversarial override through the prompt interface.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -753,11 +974,19 @@ Write down what adversarial inputs you have assumed are unlikely to work and why
 
 *Boundary:* Documents what was claimed. Does not verify behavior under adversarial conditions.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -771,11 +1000,19 @@ Write down what adversarial inputs you have assumed are unlikely to work and why
 
 *Boundary:* Covers scenarios its authors anticipated. Absence of a threat model is a significant finding.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -791,11 +1028,19 @@ Write down what adversarial inputs you have assumed are unlikely to work and why
 
 *Boundary:* Resistance to tested vectors does not imply resistance to untested ones. State untested vectors explicitly in residual risk register.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -809,11 +1054,19 @@ Write down what adversarial inputs you have assumed are unlikely to work and why
 
 *Boundary:* Covers techniques in scope. Novel techniques not tested remain unverified.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -827,11 +1080,19 @@ Write down what adversarial inputs you have assumed are unlikely to work and why
 
 *Boundary:* Covers combinations in the test plan. Multi-step interaction effects may not be covered.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -845,11 +1106,19 @@ Write down what adversarial inputs you have assumed are unlikely to work and why
 
 *Boundary:* Signature verification confirms integrity. Dormant behaviors require Bounded Investigation.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -863,11 +1132,19 @@ Write down what adversarial inputs you have assumed are unlikely to work and why
 
 *Boundary:* Reduces the prompt injection surface; does not eliminate it.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -881,11 +1158,19 @@ Write down what adversarial inputs you have assumed are unlikely to work and why
 
 *Ceiling:* Requires adversarial ML expertise. Scope to highest-risk extension points from EX-O-1 and EX-T-1.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Scope documented:** *(what was tested, what was not, and why)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -897,17 +1182,25 @@ Write down what adversarial inputs you have assumed are unlikely to work and why
 
 *Ceiling:* Requires specialist expertise. Scope to defined conversation lengths. Document untested interaction patterns.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Scope documented:** *(what was tested, what was not, and why)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
 ## Domain Residual Risk Register — Extensibility
 
-| Item ID | Description of Gap | Reason Not Fully Assessed | Risk Owner | Review Date |
+| Risk ID / Check ID | Remaining exposure or uncertainty | Evidence / limitation | Treatment owner / acceptance authority | Decision / review date |
 |---|---|---|---|---|
 | | | | | |
 | | | | | |
@@ -917,7 +1210,7 @@ Write down what adversarial inputs you have assumed are unlikely to work and why
 # Domain 4: Adaptability
 
 **Force:** Native to ML — #6  
-**Core statement:** Security properties do not persist across model updates.
+**Core statement:** Security properties require revalidation after relevant model updates.
 
 ## Force Summary
 
@@ -971,11 +1264,19 @@ Write down the date of your last security evaluation and what it covered. Then w
 
 *Boundary:* Records deployment changes. Does not verify whether security properties were verified for each version.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -989,11 +1290,19 @@ Write down the date of your last security evaluation and what it covered. Then w
 
 *Boundary:* Records notifications received. Does not verify that review correctly assessed security impact.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1007,11 +1316,19 @@ Write down the date of your last security evaluation and what it covered. Then w
 
 *Boundary:* Documents what is being watched. Does not verify monitoring covers the right behaviors or that alerts are acted upon.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1025,11 +1342,19 @@ Write down the date of your last security evaluation and what it covered. Then w
 
 *Boundary:* Documents intended approval chain. Does not verify consistent adherence in practice.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1043,11 +1368,19 @@ Write down the date of your last security evaluation and what it covered. Then w
 
 *Boundary:* Absence of a validity period policy is itself a finding — evaluations have no defined expiry.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1063,11 +1396,19 @@ Write down the date of your last security evaluation and what it covered. Then w
 
 *Boundary:* Verifies coverage for tested variations. Changes outside the test set may not be detected.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1081,11 +1422,19 @@ Write down the date of your last security evaluation and what it covered. Then w
 
 *Boundary:* Verified detection means you identified that an update occurred. Does not assess security impact.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1099,11 +1448,19 @@ Write down the date of your last security evaluation and what it covered. Then w
 
 *Boundary:* Covers scenarios its authors anticipated. Novel failure modes from adaptation may not be in scope.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1117,11 +1474,19 @@ Write down the date of your last security evaluation and what it covered. Then w
 
 *Boundary:* Covers documented adaptations. Undocumented adaptations are a gap in the log, not a gap in what changed.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1135,11 +1500,19 @@ Write down the date of your last security evaluation and what it covered. Then w
 
 *Boundary:* Detects statistical distribution shifts. A model can drift in security-relevant ways while appearing statistically normal.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1151,13 +1524,21 @@ Write down the date of your last security evaluation and what it covered. Then w
 
 *Reference:* BIML ML Security Risk Framework; MITRE ATLAS; published LLM behavioral evaluation research.
 
-*Ceiling:* Requires behavioral test battery and retained baselines from prior versions. If BC, document what version comparison was not performed.
+*Ceiling:* Requires behavioral test battery and retained baselines from prior versions. If access or expertise is unavailable, document what version comparison was not performed.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Scope documented:** *(what was compared, what was not, and why)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1167,19 +1548,27 @@ Write down the date of your last security evaluation and what it covered. Then w
 
 *Reference:* BIML ML Security Risk Framework; MITRE ATLAS AML.T0020 (fine-tuning context); Hubinger et al. (2024), Anthropic.
 
-*Ceiling:* Requires original evaluation findings as baseline. Scope to adaptations since last evaluation. If BC, document which adaptations were not tested.
+*Ceiling:* Requires original evaluation findings as baseline. Scope to adaptations since last evaluation. If access or expertise is unavailable, document which adaptations were not tested.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Scope documented:** *(what adaptations were tested, what was not, and why)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
 ## Domain Residual Risk Register — Adaptability
 
-| Item ID | Description of Gap | Reason Not Fully Assessed | Risk Owner | Review Date |
+| Risk ID / Check ID | Remaining exposure or uncertainty | Evidence / limitation | Treatment owner / acceptance authority | Decision / review date |
 |---|---|---|---|---|
 | | | | | |
 | | | | | |
@@ -1241,11 +1630,19 @@ Write down what you know is not covered by this system's security evaluations. N
 
 *Boundary:* A boundary not updated since initial design is a prior assertion, not a current fact.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1259,11 +1656,19 @@ Write down what you know is not covered by this system's security evaluations. N
 
 *Boundary:* Transitive dependencies are rarely fully inventoried.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1277,11 +1682,19 @@ Write down what you know is not covered by this system's security evaluations. N
 
 *Boundary:* Absence of documented emergent behaviors may mean insufficient discovery, not absence of emergence.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1295,11 +1708,19 @@ Write down what you know is not covered by this system's security evaluations. N
 
 *Boundary:* Absence of gap documentation is itself a significant finding.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1313,11 +1734,19 @@ Write down what you know is not covered by this system's security evaluations. N
 
 *Boundary:* A plan covering known failure modes is not a plan for emergent complexity failures.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1333,11 +1762,19 @@ Write down what you know is not covered by this system's security evaluations. N
 
 *Boundary:* Covers known, disclosed vulnerabilities in catalogued dependencies only.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1351,11 +1788,19 @@ Write down what you know is not covered by this system's security evaluations. N
 
 *Boundary:* Interaction complexity grows combinatorially. Comprehensive coverage is not achievable.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1369,11 +1814,19 @@ Write down what you know is not covered by this system's security evaluations. N
 
 *Boundary:* 60% coverage means 40% is unknown, not 40% is clean.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1387,11 +1840,19 @@ Write down what you know is not covered by this system's security evaluations. N
 
 *Boundary:* Tests OOD scenarios the tester designed. Truly novel inputs outside the tester's model of the unusual are outside coverage.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1405,11 +1866,19 @@ Write down what you know is not covered by this system's security evaluations. N
 
 *Boundary:* Covers known failure modes only. Unknown failure modes are outside coverage by definition.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1421,13 +1890,21 @@ Write down what you know is not covered by this system's security evaluations. N
 
 *Reference:* BIML ML Security Risk Framework; MITRE ATLAS; Wei et al. (2022), "Emergent Abilities of Large Language Models," *Transactions on Machine Learning Research*.
 
-*Ceiling:* Requires ML security expertise. Scope to capabilities most relevant to the threat model. If BC, document that emergent capability assessment was not performed.
+*Ceiling:* Requires ML security expertise. Scope to capabilities most relevant to the threat model. If access or expertise is unavailable, document that emergent capability assessment was not performed.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Scope documented:** *(what was assessed, what was not, and why)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1437,19 +1914,27 @@ Write down what you know is not covered by this system's security evaluations. N
 
 *Reference:* BIML ML Security Risk Framework; MITRE ATLAS; NIST AI RMF (Measure 2.5).
 
-*Ceiling:* Most resource-intensive check in this domain. Scope to highest-risk portions. If BC, document what was not assessed at integrated level.
+*Ceiling:* Most resource-intensive check in this domain. Scope to highest-risk portions. If access or expertise is unavailable, document what was not assessed at integrated level.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Scope documented:** *(what was assessed, what was not, and why)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
 ## Domain Residual Risk Register — Complexity
 
-| Item ID | Description of Gap | Reason Not Fully Assessed | Risk Owner | Review Date |
+| Risk ID / Check ID | Remaining exposure or uncertainty | Evidence / limitation | Treatment owner / acceptance authority | Decision / review date |
 |---|---|---|---|---|
 | | | | | |
 | | | | | |
@@ -1459,19 +1944,19 @@ Write down what you know is not covered by this system's security evaluations. N
 # Domain 6: Opacity
 
 **Force:** Native to ML — #4  
-**Core statement:** The system cannot be meaningfully inspected.
+**Core statement:** Inspection and interpretation provide bounded evidence about model behavior.
 
 ## Force Summary
 
-Ken Thompson ended "Reflections on Trusting Trust" with the observation that trust ultimately rests in people, not systems. Model weights are not readable. There is no source of truth a practitioner can examine. Standard security audit has no equivalent in ML. What exists instead is behavioral testing — categorically different from inspection, with categorically different coverage guarantees.
+Model inspection, interpretability and behavioral testing provide complementary, incomplete evidence. Weight access does not by itself explain behavior or establish the absence of backdoors. Record which techniques and architectures were examined, and the limits of each conclusion.
 
-Note: This domain will carry more BC status items than any other. That is not a design failure. It is the framework being honest about Thompson's problem.
+Document unavailable access and specialist capacity as limitations. Record completion and effectiveness independently.
 
 ## Mechanism of Failure
 
-**Weight opacity** — model weights are unreadable by anyone, including the organization that trained the model.
+**Weight opacity** — weights do not directly provide a complete human-readable account of learned behavior.
 
-**Audit impossibility** — traditional code review has no equivalent. What passes for model audit is behavioral testing of a fraction of possible inputs.
+**Audit limits** — code review, artifact inspection, interpretability and behavioral tests each cover different properties; none alone establishes complete model assurance.
 
 **Backdoor persistence through opacity** — Thompson's insight realized. A backdoor in weights leaves no human-readable trace.
 
@@ -1479,7 +1964,7 @@ Note: This domain will carry more BC status items than any other. That is not a 
 
 ## Foundation Model Boundary
 
-For foundation models, opacity is absolute at the practitioner level. You cannot inspect the weights. Do not treat provider documentation as inspection. It is not.
+For foundation models, available inspection depends on access and architecture. Weight access and interpretability can provide bounded evidence, but do not establish complete behavioral assurance. Provider documentation is a separate evidence source.
 
 ## Human Layer Risk Prompt
 
@@ -1511,11 +1996,19 @@ When a system cannot be examined, practitioners accept its outputs rather than s
 
 *Boundary:* Post-hoc explanation tools produce approximations of local behavior, not access to internals. A clean interpretability output means no concerning signals in the scoped analysis, not that the model's internals are clean.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1529,11 +2022,19 @@ When a system cannot be examined, practitioners accept its outputs rather than s
 
 *Boundary:* The ratio of tested to total possible inputs is effectively zero. This is structural, not a gap to close with more testing.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1547,11 +2048,19 @@ When a system cannot be examined, practitioners accept its outputs rather than s
 
 *Boundary:* Model card documents what authors chose to include. Claims are statements by creators, not independently verified.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1565,11 +2074,19 @@ When a system cannot be examined, practitioners accept its outputs rather than s
 
 *Boundary:* Absence of documented unknowns is itself a significant finding. For most ML deployments, this documentation does not exist. Creating it is the value of this check.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1581,13 +2098,21 @@ When a system cannot be examined, practitioners accept its outputs rather than s
 
 *Grounded in:* Mitchell et al. (2019); BIML.
 
-*Boundary:* Provider documentation is a statement by an interested party, not an independent audit. A = opacity statement produced and documented, not opacity resolved.
+*Boundary:* Provider documentation is a statement by an interested party, not an independent audit. Completed = opacity statement produced and documented, not opacity resolved.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1603,11 +2128,19 @@ When a system cannot be examined, practitioners accept its outputs rather than s
 
 *Boundary:* Coverage characterization tells you the shape of the known space. 15% tested means 85% is unknown, not 85% is safe.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1621,11 +2154,19 @@ When a system cannot be examined, practitioners accept its outputs rather than s
 
 *Boundary:* The adversarial landscape evolves. Opacity means you cannot determine from inspection why a model is vulnerable to a specific input.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1639,11 +2180,19 @@ When a system cannot be examined, practitioners accept its outputs rather than s
 
 *Boundary:* Tests calibration on tested inputs. Not a guarantee of calibration on out-of-distribution inputs.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1657,11 +2206,19 @@ When a system cannot be examined, practitioners accept its outputs rather than s
 
 *Boundary:* Covers known failure modes. Unknown failure modes produce unknown behavioral signatures.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1675,11 +2232,19 @@ When a system cannot be examined, practitioners accept its outputs rather than s
 
 *Boundary:* Tool outputs cover scoped analysis only. A clean output means no signals in that scope, not that internals are clean.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Evidence notes:** *(write here)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1693,11 +2258,19 @@ When a system cannot be examined, practitioners accept its outputs rather than s
 
 *Ceiling:* Current techniques cover specific studied behaviors in specific architectures. Comprehensive internal audit is not achievable. Scope tightly to behaviors of concern from behavioral testing. Note: mechanistic interpretability is rapidly developing.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Scope documented:** *(what was examined, what was not, and why)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1707,13 +2280,21 @@ When a system cannot be examined, practitioners accept its outputs rather than s
 
 *Reference:* BIML ML Security Risk Framework; MITRE ATLAS; NIST AI RMF (Measure 2.5); published red-teaming methodology for large language models.
 
-*Ceiling:* Requires dedicated adversarial ML expertise. Scope to highest-risk behavior space as defined by the threat model. If BC, document what adversarial scenarios were not covered.
+*Ceiling:* Requires dedicated adversarial ML expertise. Scope to highest-risk behavior space as defined by the threat model. If access or expertise is unavailable, document what adversarial scenarios were not covered.
 
-**Status:** A / RR / BC
+**Assessment completion:** Completed / Partial / Not assessed / Not applicable
+
+**Applicability / scope rationale and reviewer:** *(required, including any exclusion)*
+
+**Control effectiveness:** Effective within tested scope / Ineffective / Inconclusive / Not applicable
+
+**Security expectation and outcome rationale:** *(write here)*
+
+**Evidence references:** *(implementation / verification / operational; IDs and limitations)*
 
 **Scope documented:** *(what was assessed, what was not, and why)*
 
-**Residual risk notes:** *(required if RR or BC)*
+**Residual risk notes:** *(record remaining exposure and uncertainty, or justify none identified; link risk record)*
 
 ---
 
@@ -1721,7 +2302,7 @@ When a system cannot be examined, practitioners accept its outputs rather than s
 
 *Note: This register is expected to be the longest in the framework. A long residual risk register in this domain is an honest assessment, not a failed one.*
 
-| Item ID | Description of Gap | Reason Not Fully Assessed | Risk Owner | Review Date |
+| Risk ID / Check ID | Remaining exposure or uncertainty | Evidence / limitation | Treatment owner / acceptance authority | Decision / review date |
 |---|---|---|---|---|
 | | | | | |
 | | | | | |
@@ -1734,7 +2315,7 @@ When a system cannot be examined, practitioners accept its outputs rather than s
 
 ## Assessed Posture by Force
 
-| Force | Observable | Testable | Bounded | Overall Posture |
+| Force | Completion by tier | Effectiveness and evidence | Limitations / exclusions | Residual risk IDs |
 |---|---|---|---|---|
 | Data Entanglement | | | | |
 | Connectivity | | | | |
@@ -1745,9 +2326,9 @@ When a system cannot be examined, practitioners accept its outputs rather than s
 
 ## Cross-Domain Residual Risk Register
 
-*Consolidate all RR and BC items from domain registers here.*
+*Consolidate remaining exposure and uncertainty from all checks, including completed checks. Use the [residual risk register](templates/residual-risk-register.md) for decision details.*
 
-| Item ID | Domain | Description | Reason | Owner | Review Date |
+| Risk ID / Check ID | Domain | Exposure / uncertainty | Treatment | Owner / acceptance authority | Decision / review date |
 |---|---|---|---|---|---|
 | | | | | | |
 

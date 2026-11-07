@@ -8,6 +8,14 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Security assessment improvements
+- Separate completion, control effectiveness, implementation, verification and operational evidence across all 72 checks.
+- Add justified not-applicable decisions and independent residual-risk decisions, with migration guidance for A/RR/BC records.
+- Add framework-neutral templates, evidence and risk registers, contribution review checklist and fictional update-admission example. No project-specific findings or executed security tests are claimed.
+- Bound the core opacity and update-persistence statements; retain the v0.1 filename while this revision is unreleased.
+- Refresh README navigation to existing work products; Word instrument remains planned.
+
+
 ### Fixed
 - The 0.1.0 entry listed `instrument/DTAF_v01_instrument.docx` as added. The file is not in the repository. It is planned.
 - Withdrew two claims from the 0.1.0 entry: "verified citations" and "MITRE ATLAS technique IDs verified at time of writing". Only the reference entries added below were checked against publisher or official pages. The older reference entries have not been systematically re-verified. The ATLAS IDs were checked on atlas.mitre.org on 7 November 2026.
